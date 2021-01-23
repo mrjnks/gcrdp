@@ -32,5 +32,4 @@ printf 'Check https://remotedesktop.google.com/access/ \n\n'
     /bin/sh -c "$success"
 else
     printf "\n\nError Occured " >&2
-fi
-HERE
+HERE fi
