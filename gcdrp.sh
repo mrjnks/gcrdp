@@ -1,7 +1,7 @@
 #! /bin/bash
 printf "Installing RDP Be Patience... " >&2
 {
-sudo -s <<HERE
+sudo -s
 read -p "Choose username: " usrn
 read -p "Choose password: " mypswd
 useradd -m $usrn
@@ -32,4 +32,4 @@ printf 'Check https://remotedesktop.google.com/access/ \n\n'
     /bin/sh -c "$success"
 else
     printf "\n\nError Occured " >&2
-HERE fi
+fi
