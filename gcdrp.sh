@@ -1,9 +1,7 @@
 #! /bin/bash
-# GCOLAB RDP SETUP
-%%html
-<marquee style='width: 30%; color: blue;'><b>RDP SETUP IN PROCESS, PLEASE WAIT.... Weeeeee</b></marquee> >&2
+printf "Installing RDP Be Patience... " >&2
 {
-sudo -s
+sudo -s <<HERE
 read -p "Choose username: " usrn
 read -p "Choose password: " mypswd
 useradd -m $usrn
@@ -35,3 +33,4 @@ printf 'Check https://remotedesktop.google.com/access/ \n\n'
 else
     printf "\n\nError Occured " >&2
 fi
+HERE
