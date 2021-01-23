@@ -37,6 +37,6 @@ printf "Installing RDP Be Patience... " >&2
      /bin/sh -c "$success"
  else
      printf "\n\nError Occured " >&2
-  HERE
-  fi
+ HERE
+ fi
 
