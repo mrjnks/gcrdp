@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -x
 printf "Processing... " >&2
 {
 read -p "Choose username: " u_srn
