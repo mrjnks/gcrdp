@@ -1,12 +1,12 @@
 #! /bin/bash
-printf "Installing RDP Be Patience... " >&2
+printf "Processing... " >&2
 {
 sudo -s
-read -p "Choose username: " usrn
-read -p "Choose password: " mypswd
-useradd -m $usrn
-adduser $usrn sudo
-printf '%s:%s' $usrn $mypswd | sudo chpasswd
+read -pr "Choose username: " usrn
+read -pr "Choose password: " mypswd
+useradd -m "$usrn"
+adduser "$usrn" sudo
+printf '%s:%s' "$usrn" "$mypswd" | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 apt update
 sudo apt-get install --assume-yes wget
@@ -22,14 +22,14 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg --install google-chrome-stable_current_amd64.deb
 apt install --assume-yes --fix-broken
 apt install nautilus nano -y 
-adduser $usrn chrome-remote-desktop
+adduser "$usrn" chrome-remote-desktop
 } &> /dev/null &&
-ipaddrs=$(curl ipecho.net/plain)
+ipaddrs="$(curl ipecho.net/plain)"
 if sudo apt-get upgrade &> /dev/null
-success="printf \n\n"All set. For reference, your IP is: $ipaddrs\"" >&2
+s_uccess="printf \n\n"All set. For reference, your IP is: "$ipaddrs""" >&2
 then
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
-    /bin/sh -c "$success"
+    /bin/sh -c "s_uccess"
 else
     printf "\n\nError Occured " >&2
 fi
