@@ -29,7 +29,7 @@ if sudo apt-get upgrade &> /dev/null
 s_uccess="printf \n\n"All set. For reference, your IP is: "$ipaddrs""" >&2
 then
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
-    /bin/sh -c "s_uccess"
+/bin/sh -c "s_uccess"
 else
-    printf "\n\nError Occured " >&2
+printf "\n\nError Occured " >&2
 fi
