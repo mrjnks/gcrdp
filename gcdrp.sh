@@ -1,8 +1,8 @@
 #! /bin/bash
 printf "Processing... " >&2
 {
-read -pr "Choose username: " u_srn
-read -pr "Choose password: " my_pswd
+read -p "Choose username: " u_srn
+read -p "Choose password: " my_pswd
 sudo -s | useradd -m """$u_srn"""
 adduser """$u_srn""" sudo
 printf '%s:%s' """$u_srn""" """$my_pswd""" | sudo chpasswd
