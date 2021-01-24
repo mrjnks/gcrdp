@@ -1,7 +1,7 @@
 #! /bin/bash
 printf "Processing... " >&2
 {
-sudo -s <<HERE
+sudo -s
 read -pr "Choose username: " "u_srn"
 read -pr "Choose password: " "my_pswd"
 useradd -m "$u_srn"
@@ -30,7 +30,5 @@ s_uccess="printf \n\n"All set. For reference, your IP is: "$ipaddrs""" >&2
 then
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 /bin/sh -c "s_uccess"
-else
-printf "\n\nError Occured " >&2
-HERE
+else printf "\n\nError Occured " >&2
 fi
